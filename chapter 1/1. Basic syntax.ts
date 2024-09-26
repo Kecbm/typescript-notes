@@ -36,7 +36,6 @@ function verificaParOuImpar(numero: number): string {
     resultado = "ímpar";
   }
 
-
   return resultado;
 }
 
