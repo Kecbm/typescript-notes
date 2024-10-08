@@ -16,13 +16,34 @@ function calculaMedia(nota1: number, nota2: number): number {
 console.log('A média é: ', calculaMedia(10, 5));
 // A média é: 7.5
 
-// QUESTÕES INICIANTES
+const temperaturaCelsius: number = 30;
 
-// Questão 2: Conversão de Temperatura
-// Pergunta: Você tem uma variável chamada temperaturaCelsius, que contém uma temperatura em graus Celsius. Escreva um algoritmo que converta essa temperatura para Fahrenheit e armazene o resultado em uma variável chamada temperaturaFahrenheit. Qual será o código correto para fazer essa conversão?
+function converterTemperatura(temperaturaCelsius: number): number {
+  return (temperaturaCelsius * 1.8) + 32;
+}
 
-// Questão 3: Verificação de Par ou Ímpar
-// Pergunta: Você tem uma variável chamada numero, que armazena um número inteiro. Escreva um algoritmo que verifique se esse número é par ou ímpar e armazene a string "par" ou "ímpar" em uma variável chamada resultado. Qual será o código correto para realizar essa verificação?
+console.log(`A temperatura em Fahrenheit é ${converterTemperatura(temperaturaCelsius)}°F`);
+// A temperatura em Fahrenheit é 86°F
+
+const numero: number = 2;
+
+function verificaParOuImpar(numero: number): string {
+  var resultado: string;
+
+  if (numero % 2 === 0) {
+    resultado = "par";
+  } else {
+    resultado = "ímpar";
+  }
+
+
+  return resultado;
+}
+
+console.log(`O número ${numero} é ${verificaParOuImpar(numero)}`);
+// O número 2 é par
+
+// 👉🏾 QUESTÕES DE NÍVEL INTERMEDIÁRIO (COM BOOLEAN)
 
 // 🔵 Arrays
 
