@@ -44,14 +44,27 @@ console.log(`O número ${numero} é ${verificaParOuImpar(numero)}`);
 
 // 👉🏾 QUESTÕES DE NÍVEL INTERMEDIÁRIO (COM BOOLEAN)
 
-// Questão 1: Verificação de Palíndromo
-// Pergunta: Escreva uma função chamada ehPalindromo que recebe uma string e retorna um valor booleano indicando se a string é um palíndromo (a mesma sequência de caracteres lida de trás para frente). Qual será a lógica correta para implementar essa função?
+function ehPalindromo(palavra: string): boolean {
+  let palavraInvertida: string = palavra.split('').reverse().join('');
 
-// Questão 2: Validação de Senha
-// Pergunta: Crie uma função chamada validarSenha que recebe uma senha (do tipo string) e retorna true se a senha for válida de acordo com as seguintes regras:
-// A senha deve ter pelo menos 8 caracteres.
-// Deve conter pelo menos um número.
-// Deve conter pelo menos uma letra maiúscula. Caso contrário, a função deve retornar false. Como você implementaria essa lógica?
+  if (palavra === palavraInvertida) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(`A palavra "radar" ${ehPalindromo("radar") ? "é palíndromo" : "não é palíndromo"}`);
+// A palavra "radar" é palíndromo
+
+function validarSenha(senha: string): boolean {
+  const validacao: boolean = senha.length >= 8 && !!senha.match(/[0-9]/) && !!senha.match(/[A-Z]/);
+
+  return validacao;
+}
+
+console.log(`A senha "12345678" é ${validarSenha("12345678") ? "válida" : "inválida"}`);
+// A senha "12345678" é inválida
 
 // Questão 3: Verificação de Subconjunto
 // Pergunta: Escreva uma função chamada isSubset que recebe dois arrays de números como parâmetros e retorna true se todos os elementos do primeiro array estiverem presentes no segundo array, independentemente da ordem. Caso contrário, retorne false. Como você implementaria essa verificação?
